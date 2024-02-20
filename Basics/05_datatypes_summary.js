@@ -15,7 +15,7 @@ let userEmail2 = undefined;
 let id = Symbol('123');
 let anotherId = Symbol('123');
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
 let bigNumber = 12282839222n
 
@@ -36,4 +36,35 @@ const myFunction = function(){
 }
 
 // typeof Operator
+
+
+// ++++++ Stack and Heap Memory in JS +++++++++++++
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+// All the primitive values are created in stack, and we will get a copy of that. 
+// Non-primitive are created in heap and we will get reference of them.
+
+let myName = "shriyansh"
+
+let anotherName = myName;
+
+anotherName = "kittu"
+
+// console.log(myName)
+// console.log(anotherName)
+
+let objectOne = {
+    email: "user@google.com",
+    upi: "upi@ybl"
+}
+
+let objectTwo = objectOne
+
+objectTwo.email = "new@yahoo.com"
+
+// Note: Objects one and Two are created in stack, but they will get the reference of same memory in the heap.
+
+console.log(objectOne.email)
+console.log(objectTwo.email)
 
